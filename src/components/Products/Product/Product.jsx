@@ -25,7 +25,7 @@ const Product = ({ product }) => {
           </Typography>
           <Typography variant="h5">{product.price}</Typography>
         </div>
-        <Typography variant="body2" color="text">
+        <Typography variant="body2" color="primary">
           {product.description}
         </Typography>
       </CardContent>
