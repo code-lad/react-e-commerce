@@ -11,16 +11,12 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
-  center:{
-    display:'flex',
-    alignItems:'center',
-    padding:'5px',
-    color:'red',
-    fontWeight:'600'
-  },
+
   title: {
     flexGrow: 1,
     alignItems: 'center',
+    color:'red',
+    fontWeight:'600',
     display: 'flex',
     textDecoration: 'none',
   },

@@ -14,8 +14,8 @@ const Navbar = () => {
   return (
     <div>
       <AppBar position="fixed" className={classes.appBar} color="inherit">
-        <Toolbar variant="h6" className={classes.title} color="inherit">
-          <Typography className={classes.center}>
+        <Toolbar>
+          <Typography variant="h6" className={classes.title} color="inherit">
             <img
               src={logo}
               alt="e-commerce-logo"
