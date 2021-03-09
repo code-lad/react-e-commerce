@@ -9,7 +9,7 @@ import {
 import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
 
-const Product = ({ product }) => {
+const Product = ({ product, onAddToCart }) => {
   const classes = useStyles();
 
   return (
@@ -21,21 +21,24 @@ const Product = ({ product }) => {
       />
       <CardContent>
         <div className={classes.cardContent}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h6" gutterBottom>
             {product.name}
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h6">
             {product.price.formatted_with_symbol}
           </Typography>
         </div>
         <Typography
           dangerouslySetInnerHTML={{ __html: product.description }}
-          variant="body2"
+          variant="body1"
           color="primary"
         />
       </CardContent>
       <CardActions disableSpacing className={classes.cardAction}>
-        <IconButton arial-label="Add to Cart">
+        <IconButton
+          arial-label="Add to Cart"
+          onClick={() => onAddToCart(product.id, 1)}
+        >
           <AddShoppingCart />
         </IconButton>
       </CardActions>
